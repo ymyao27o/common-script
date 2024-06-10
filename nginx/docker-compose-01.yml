@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  nginx-ipinfo:
+    image: nginx-ipinfo:v1.1
+    volumes:
+      - conf:/etc/nginx/conf.d
+      - logs:/var/log/nginx
+      - html:/usr/share/nginx/html
+    ports:
+      - 80:80
+
+volumes:
+  conf:
+  logs:
+  html:

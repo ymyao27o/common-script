@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  nginx-ipinfo:
+    image: registry.cn-hangzhou.aliyuncs.com/ymyao/nginx-ipinfo:v1.0
+    volumes:
+      - conf:/etc/nginx/conf.d
+      - logs:/var/log/nginx
+      - html:/usr/share/nginx/html
+    ports:
+      - 80:80
+
+volumes:
+  conf:
+  logs:
+  html:
