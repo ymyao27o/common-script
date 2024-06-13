@@ -1,0 +1,4 @@
+git_token
+mongodb/package/*
+mysql/*/data
+nginx/cert/*
