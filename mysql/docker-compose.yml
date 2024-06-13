@@ -13,8 +13,8 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./mysql-master/data:/var/lib/mysql
-      - ./mysql-master/conf/my.cnf:/etc/mysql/my.cnf
+      - mysql-master-data:/var/lib/mysql
+      - ./mysql-master/my.cnf:/etc/mysql/my.cnf
       - /etc/localtime:/etc/localtime:ro
     healthcheck:
       test: ["CMD-SHELL", "mysql -uroot -p$${MYSQL_ROOT_PASSWORD} -e 'select 1;' >/dev/null || exit 1"]
@@ -35,8 +35,8 @@ services:
     ports:
       - 3307:3306
     volumes:
-      - ./mysql-slave-01/data:/var/lib/mysql
-      - ./mysql-slave-01/conf/my.cnf:/etc/mysql/my.cnf
+      - mysql-slave-01-data:/var/lib/mysql
+      - ./mysql-slave-01/my.cnf:/etc/mysql/my.cnf
       - /etc/localtime:/etc/localtime:ro
     healthcheck:
       test: ["CMD-SHELL", "mysql -uroot -p$${MYSQL_ROOT_PASSWORD} -e 'select 1;' >/dev/null || exit 1"]
@@ -48,5 +48,9 @@ services:
 networks:
   mysql-group-net:
     driver: bridge
-
+volumes:
+  mysql-master-data:
+    driver: local
+  mysql-slave-01-data:
+    driver: local
 

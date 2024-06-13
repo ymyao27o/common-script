@@ -1,3 +1,5 @@
+select * from information_schema.processlist as p where p.command = 'Binlog Dump'; 
+
 CREATE DATABASE company;
 
 USE company;
@@ -10,11 +12,7 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-DESCRIBE users;
-
 INSERT INTO users (name, email, password) VALUES
 ('Bob', 'bob@example.com', 'password456'),
 ('Charlie', 'charlie@example.com', 'password789'),
 ('David', 'david@example.com', 'password321');
-
-SELECT * FROM users;
