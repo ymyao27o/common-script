@@ -1,4 +1,13 @@
 git_token
+
 mongodb/package/*
+mongodb/**/.env
+
+terraform/*/*.tfstate*
+terraform/*/*.lock*
+terraform/*/.*
+terraform/*/.env
+
 mysql/*/data
 nginx/cert/*
+

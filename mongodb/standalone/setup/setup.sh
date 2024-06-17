@@ -96,7 +96,7 @@ function unzip_mongo_pkg(){
   local sh_tar_name="mongosh-*-linux-x64"
   local db_tar_name="mongodb-linux-$arch-$linux-$version"
 
-  local pkg_path="$SCRIPT_PATH/../package"
+  local pkg_path="$SCRIPT_PATH/../../package"
   local sh_tar_path="$pkg_path/$sh_tar_name.tgz"
   local db_tar_path="$pkg_path/$db_tar_name.tgz"
  
