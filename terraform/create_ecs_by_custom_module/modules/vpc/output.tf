@@ -3,9 +3,10 @@ output "vpc_id" {
 }
 
 output "vswitch_id" {
-  value = alicloud_vswitch.vsw_1.id
+  value = alicloud_vswitch.vsw.*.id
 }
 
 output "vswitch_zone_id" {
-  value = alicloud_vswitch.vsw_1.zone_id
+  value = alicloud_vswitch.vsw.*.zone_id
 }
+

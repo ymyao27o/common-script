@@ -8,4 +8,3 @@
 3. 具体参数
     - 输入键说明：https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/instance
     - 输入值选择：https://api.aliyun.com/api/Ecs/2014-05-26/DescribePrice
-
